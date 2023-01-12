@@ -8,6 +8,11 @@ class Main(QDialog):
         self.setWindowTitle("PyQt App")
         label = QLabel(self)
         label.setText("Siema")
+        label.setStyleSheet("color:red; font-size:15px")
+        checkbox = QCheckBox(self)
+        self.sendMessage()
+    def sendMessage(self):
+        QMessageBox.information(self,"Notify","Hello world!")
 
 
 if __name__=='__main__':
